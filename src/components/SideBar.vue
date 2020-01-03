@@ -39,7 +39,7 @@
           link
         >
           <v-list-item-icon>
-            <mdi-icon>{{ item.icon }}</mdi-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
