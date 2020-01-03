@@ -3,6 +3,7 @@
     <v-app-bar
       app
     >
+    
       <app-topNav v-on:toggledDrawer="changeDrawer()" />
     </v-app-bar>
 
