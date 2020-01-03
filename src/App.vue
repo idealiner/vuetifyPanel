@@ -3,11 +3,11 @@
     <v-app-bar
       app
     >
-      <app-topNav v-on:changeDrawer="changeDrawer()" />
+      <app-topNav v-on:toggledDrawer="changeDrawer()" />
     </v-app-bar>
 
     <v-content >
-      <app-sideBar  />
+      <app-sideBar ref="sideBarRef" />
     </v-content>
   </v-app>
 </template>
@@ -28,6 +28,9 @@ export default {
   methods: {
     changeDrawer: function(){
       console.log('error')
+      this.$root.foo = !this.$root.foo
+      console.log('console called from AppVue, root:', this.$root.foo)
+      this.$refs.sideBarRef.toggleDrawer()
     }
   }
 };

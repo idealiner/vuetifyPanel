@@ -12,9 +12,9 @@
 export default {
     methods: {
         toggleDrawer: function(){
-            //drawer = !drawer
-            
-            this.$emit('toggleDrawer')
+            //this.$root.foo = !this.$root.foo
+            this.$emit('toggledDrawer')
+            //console.log('console called from topNav, root:', this.$root.foo)
         }
     }
 }

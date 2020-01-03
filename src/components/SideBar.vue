@@ -12,7 +12,8 @@
         <v-btn
           color="pink"
           dark
-          @click.stop="drawer = !drawer"
+          @click.stop="toggleDrawer()"
+          
         >
           Toggle
         </v-btn>
@@ -59,11 +60,6 @@
 
 <script>
 export default {
-    methods: {
-        toggleDrawer: function(){
-           // drawer = !drawer
-        }
-    },
     props: {
         //drawer: String
     },
@@ -76,6 +72,13 @@ export default {
         ],
         }
     },
+    methods: {
+        toggleDrawer: function(){
+           this.drawer = !this.drawer
+           console.log('console called from sideBar, root:', this.$root.foo)
+           console.log('console called from sideBar, drawer:', this.drawer)
+        }
+    }
     
 }
 </script>

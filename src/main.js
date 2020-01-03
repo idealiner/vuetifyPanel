@@ -17,10 +17,10 @@ new Vue({
       }
   },
   methods: {
-    changeDrawer: function(){
+    baz: function(){
         //
-        this.$root.foo = !this.$root.foo
-        console(this.$root.foo)
+        this.$root.foo = true
+        console.log(this.$root.foo)
     }
   },
   vuetify,
