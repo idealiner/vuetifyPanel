@@ -2,7 +2,7 @@
     <nav>
     <v-toolbar flat >
         <v-app-bar-nav-icon class="grey--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-toolbar-title>
+        <v-toolbar-title class="grey--text">
             Leerecs
         </v-toolbar-title>
         <v-spacer></v-spacer>
@@ -48,16 +48,17 @@ export default {
             this.$emit('toggledDrawer')
             //console.log('console called from topNav, root:', this.$root.foo)
             //this.drawer = !this.drawer
-        }
-    },
+            }
+        },
         data(){
             return {
                 drawer : false,
                 items: [
                 { title: 'Home', icon: 'dashboard', route: '/' },
+                { title: 'Hello', icon: 'mdi-access-point-network', route: '/hello' },
                 { title: 'About', icon: 'question_answer', route: '/about' }
                 ]
             }
-    }
+        }
 }
 </script>
