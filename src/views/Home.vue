@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="">
     <HelloWorld msg="Welcome"/>
   </div>
 </template>

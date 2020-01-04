@@ -1,23 +1,6 @@
 <template>
-  <v-sheet
-    height="100%"
-    class="overflow-hidden"
-    style="position: relative;"
-  >
-    <v-container class="fill-height">
-      <v-row
-        align="center"
-        justify="center"
-      >
-
-      </v-row>
-    </v-container>
-
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-      class=""
+     <v-navigation-drawer
+      v-model="drawer" 
     >
       <v-list-item>
         <v-list-item-avatar>
@@ -48,7 +31,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-  </v-sheet>
 </template>
 
 <script>
@@ -60,8 +42,8 @@ export default {
         return{
             drawer: this.$root.foo,
         items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' },
+          { title: 'Home', icon: 'dashboard', link: '/home' },
+          { title: 'About', icon: 'question_answer', link: '/about' },
         ],
         }
     },

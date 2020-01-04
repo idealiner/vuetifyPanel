@@ -1,17 +1,22 @@
 <template>
-  <v-app >
-    <v-app-bar
-      app
-    >
-    
-      <app-topNav v-on:toggledDrawer="changeDrawer()" />
-    </v-app-bar>
+  <v-app>
 
-    <v-content >
-      <app-sideBar ref="sideBarRef" />
+
+    <v-content>
+       <app-topNav />
+      <!--<app-sideBar ref="sideBarRef" /> -->
+     <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
+    
     </v-content>
   </v-app>
+  
 </template>
+
+
 
 <script>
 export default {
@@ -28,9 +33,9 @@ export default {
   },
   methods: {
     changeDrawer: function(){
-      console.log('error')
-      this.$root.foo = !this.$root.foo
-      console.log('console called from AppVue, root:', this.$root.foo)
+      //console.log('error')
+      //this.$root.foo = !this.$root.foo
+      //console.log('console called from AppVue, root:', this.$root.foo)
       this.$refs.sideBarRef.toggleDrawer()
     }
   }
