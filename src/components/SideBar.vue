@@ -15,16 +15,12 @@
       <v-divider></v-divider>
 
       <v-list dense>
-
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
-        >
+        <v-list-item v-for="item in items" :key="item.title" router :to="item.route">
+        <v-list-tile-action>
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+          <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
-
+        </v-list-tile-action>
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
@@ -42,8 +38,8 @@ export default {
         return{
             drawer: this.$root.foo,
         items: [
-          { title: 'Home', icon: 'dashboard', link: '/home' },
-          { title: 'About', icon: 'question_answer', link: '/about' },
+          { title: 'Home', icon: 'dashboard', route: '/' },
+          { title: 'About', icon: 'question_answer', route: '/about' }
         ],
         }
     },
