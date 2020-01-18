@@ -1,26 +1,29 @@
 <template>
   <v-app>
-
-
     <v-content>
-       <app-topNav />
-      <!--<app-sideBar ref="sideBarRef" /> -->
-     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-    
+      <app-topNav />
+        <router-view/>
+      <app-footer />  
     </v-content>
   </v-app>
-  
 </template>
 
 
-
 <script>
+import ProductListOne from './views/Hello';
+
+import {mapState} from 'vuex'
+
 export default {
   name: 'App',
+  mounted() {
+    this.$store.dispatch('allRecords')
+  },
+  computed: {
+  ...mapState([
+      'items'
+    ])
+  },
   props: {
   },
   components: {

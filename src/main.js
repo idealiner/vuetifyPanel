@@ -1,18 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
-import vuetify from './plugins/vuetify';
+import vuetify from './plugins/vuetify'
 import router from './router'
-import store from './store'
+import songs from './store/index'
 import sideBar from './components/SideBar'
 import topNav from './components/TopNav'
-import hello from './components/HelloWorld'
+import Footer from './components/Footer'
 
 Vue.config.productionTip = false
 Vue.component('app-sideBar', sideBar);
 Vue.component('app-topNav', topNav);
-Vue.component('HelloWorld', hello);
+Vue.component('app-footer', Footer);
 
 new Vue({
+  store: songs,
   data() {
     return{
       foo: true
@@ -27,8 +28,8 @@ new Vue({
   },
   vuetify,
   router,
-  store,
   sideBar,
   topNav,
+  Footer,
   render: h => h(App)
 }).$mount('#app')

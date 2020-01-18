@@ -54,8 +54,8 @@ export default {
             return {
                 drawer : false,
                 items: [
-                { title: 'Home', icon: 'dashboard', route: '/' },
-                { title: 'Hello', icon: 'mdi-access-point-network', route: '/hello' },
+                { title: 'Hello', icon: 'dashboard', route: '/' },
+                { title: 'Home', icon: 'mdi-access-point-network', route: '/home' },
                 { title: 'About', icon: 'question_answer', route: '/about' }
                 ]
             }
